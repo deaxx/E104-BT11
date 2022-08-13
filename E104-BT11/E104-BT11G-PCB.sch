@@ -4559,7 +4559,7 @@ Source: &lt;a href="http://www.mouser.com/ds/2/15/SKRK-1110686.pdf"&gt; Datashee
 <part name="J3" library="SparkFun-Connectors" deviceset="CONN_04" device="1X04_NO_SILK" package3d_urn="urn:adsk.eagle:package:38094/1"/>
 <part name="LINK" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="LED" device="CHIP-LED0603" package3d_urn="urn:adsk.eagle:package:6240556/1"/>
 <part name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="2.2KOHM" device="-0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="2.2k"/>
-<part name="C1" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" deviceset="C" device="TANTALUM-1411(3528-METRIC)" package3d_urn="urn:adsk.eagle:package:16290902/2" technology="_"/>
+<part name="C1" library="Capacitor" library_urn="urn:adsk.eagle:library:16290819" deviceset="C" device="TANTALUM-1411(3528-METRIC)" package3d_urn="urn:adsk.eagle:package:16290902/2" technology="_" value="220u"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="BOOT" library="button3" deviceset="SKRKAEE010" device=""/>
 <part name="RST" library="button3" deviceset="SKRKAEE010" device=""/>
@@ -4593,8 +4593,8 @@ Source: &lt;a href="http://www.mouser.com/ds/2/15/SKRK-1110686.pdf"&gt; Datashee
 <attribute name="VALUE" x="114.3" y="16.256" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="C1" gate="G$1" x="116.84" y="38.1" smashed="yes" rot="R90">
-<attribute name="NAME" x="114.3" y="40.64" size="1.778" layer="95"/>
-<attribute name="VALUE" x="116.84" y="40.64" size="1.778" layer="96" rot="R90"/>
+<attribute name="NAME" x="116.84" y="40.64" size="1.778" layer="95"/>
+<attribute name="VALUE" x="121.92" y="35.56" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="GND1" gate="1" x="124.46" y="30.48" smashed="yes">
 <attribute name="VALUE" x="121.92" y="27.94" size="1.778" layer="96"/>
@@ -4716,14 +4716,14 @@ Source: &lt;a href="http://www.mouser.com/ds/2/15/SKRK-1110686.pdf"&gt; Datashee
 </net>
 <net name="PA03" class="0">
 <segment>
-<pinref part="J1" gate="G$1" pin="10"/>
-<wire x1="12.7" y1="45.72" x2="20.32" y2="45.72" width="0.1524" layer="91"/>
-<label x="15.24" y="45.72" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$1" gate="G$1" pin="PA03"/>
 <wire x1="60.96" y1="45.72" x2="50.8" y2="45.72" width="0.1524" layer="91"/>
 <label x="50.8" y="45.72" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="6"/>
+<wire x1="12.7" y1="35.56" x2="20.32" y2="35.56" width="0.1524" layer="91"/>
+<label x="15.24" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="NC_1" class="0">
@@ -4752,26 +4752,26 @@ Source: &lt;a href="http://www.mouser.com/ds/2/15/SKRK-1110686.pdf"&gt; Datashee
 </net>
 <net name="PA04" class="0">
 <segment>
-<pinref part="J1" gate="G$1" pin="7"/>
-<wire x1="12.7" y1="38.1" x2="20.32" y2="38.1" width="0.1524" layer="91"/>
-<label x="15.24" y="38.1" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$1" gate="G$1" pin="PA04"/>
 <wire x1="60.96" y1="38.1" x2="50.8" y2="38.1" width="0.1524" layer="91"/>
 <label x="50.8" y="38.1" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="5"/>
+<wire x1="12.7" y1="33.02" x2="20.32" y2="33.02" width="0.1524" layer="91"/>
+<label x="15.24" y="33.02" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="PA05" class="0">
-<segment>
-<pinref part="J1" gate="G$1" pin="6"/>
-<wire x1="12.7" y1="35.56" x2="20.32" y2="35.56" width="0.1524" layer="91"/>
-<label x="15.24" y="35.56" size="1.778" layer="95"/>
-</segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="PA05"/>
 <wire x1="60.96" y1="35.56" x2="50.8" y2="35.56" width="0.1524" layer="91"/>
 <label x="50.8" y="35.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="10"/>
+<wire x1="12.7" y1="45.72" x2="20.32" y2="45.72" width="0.1524" layer="91"/>
+<label x="15.24" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SWD" class="0">
@@ -4985,9 +4985,9 @@ Source: &lt;a href="http://www.mouser.com/ds/2/15/SKRK-1110686.pdf"&gt; Datashee
 <label x="76.2" y="5.08" size="1.778" layer="95" rot="R90"/>
 </segment>
 <segment>
-<pinref part="J1" gate="G$1" pin="5"/>
-<wire x1="12.7" y1="33.02" x2="20.32" y2="33.02" width="0.1524" layer="91"/>
-<label x="15.24" y="33.02" size="1.778" layer="95"/>
+<pinref part="J1" gate="G$1" pin="7"/>
+<wire x1="12.7" y1="38.1" x2="20.32" y2="38.1" width="0.1524" layer="91"/>
+<label x="15.24" y="38.1" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$1" class="0">
